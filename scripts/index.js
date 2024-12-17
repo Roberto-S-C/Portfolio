@@ -40,6 +40,7 @@ if (WebGL.isWebGL2Available()) {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
 
     const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableZoom = false;
 
     function animate() {
         renderer.render(scene, camera);

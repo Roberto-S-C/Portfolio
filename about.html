@@ -13,22 +13,85 @@
 </head>
 
 <body class="dotgothic16-regular">
-    <h1 class="about">About Me</h1>
-    <div class="info">
-        <p class="dotgothic16-regular">Software Engineer | Age: 20</p>
-        <img src="/icons/mexico.png" />
+    <div class="canvas-container">
+        <canvas id="canvas1"></canvas>
+        <canvas id="canvas2"></canvas>
+        <canvas id="canvas3"></canvas>
     </div>
-
-    <canvas></canvas>
 
     <div class="content">
-        <div class="description">
-            <p>I'm a software engineer student currently on my 3rd year of carrer. I study at <a target="_blank"
-                    href="https://udg.mx/">UDG.</a></p>
-            <p>I love coding because it allows me to learn and create cool stuff. I also like reading books and
-                exercising.</p>
-        </div>
+        <section id="section1">
+            <h2>About Me</h2>
+            <h3>Roberto Sánchez<h3>
+                    <div class="info">
+                        <h3>Software engineer | Age: 20<h3>
+                                <img src="/icons/mexico.png" />
+                    </div>
+                    <div class="description">
+                        <p>I'm a software engineer student&#x1f393; currently on my 3rd year of carrer studying at <a
+                                target="_blank" href="https://udg.mx/">UDG</a>.</p>
+                        <p>I love coding because it allows me to create anything that I can thing about.</p>
+                        <p>I also like reading books&#x1f4d6; and exercising&#x1f3c3;</p>
+                    </div>
+        </section>
+        <section id="section2">
+            <h2>Skills & Projects</h2>
+            <div class="skills">
+                <div class="skill">
+                    <img src="/skills/html.png" />
+                    <p>Html</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/css.png" />
+                    <p>Css</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/js.png" />
+                    <p>Javascript</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/react.png" />
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/three.png" />
+                    <p>Three.js</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/git.png" />
+                    <p>Git</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/aspnet.webp" />
+                    <p>Asp.net</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/sql-server.png" />
+                    <p>Sql Server</p>
+                </div>
+                <div class="skill">
+                    <img src="/skills/linux.png" />
+                    <p>Linux</p>
+                </div>
+            </div>
+
+            <div class="projects">
+                <div class="project">
+                    <img role="button" id="left-arrow" class="arrows" src="/left-arrow.png" />
+                    <img role="button" id="right-arrow" class="arrows" src="/right-arrow.png" />
+                    <a target="_blank" href="https://www.aiclothes.shop">
+                        <img src="/projects/AiClothes.png" />
+                    </a>
+                    <a target="_blank" href="https://www.aiclothes.shop">AiClothes</a>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <h2>Contact</h2>
+            <p>Content for section 3...</p>
+        </section>
     </div>
+
     <script type="module" src="scripts/about.js"></script>
 </body>
 

@@ -1,6 +1,5 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/Addons.js';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 class CanvasScene {
     constructor(canvasId, sceneIndex) {

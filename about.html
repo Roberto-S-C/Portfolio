@@ -18,14 +18,27 @@
         })();
     </script>
     <script type="text/javascript">
+        function showAlert(message) {
+            const alert = document.getElementById('custom-alert');
+            const alertMessage = document.getElementById('alert-message');
+            alertMessage.textContent = message;
+            alert.style.display = 'block';
+        }
+
+        function closeAlert() {
+            document.getElementById('custom-alert').style.display = 'none';
+        }
+
         window.onload = function () {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 emailjs.sendForm('contact_service', 'contact_form', this)
                     .then(() => {
+                        showAlert('Message sent successfully!');
                         console.log('SUCCESS!');
+                        event.target.reset();
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        showAlert('Failed to send message. Please try again.');
                     });
             });
         }
@@ -53,7 +66,8 @@
                                 target="_blank" href="https://udg.mx/">UDG</a>.</p>
                         <p>I love coding because it allows me to create anything that I can thing about.</p>
                         <p>I also like reading books&#x1f4d6; and exercising.&#x1f3c3;</p>
-                        <p>I aim to become a full-stack developer&#x1f4bb; specializing in scalable web applications and artificial intelligence.&#x1f916;</p>
+                        <p>I aim to become a full-stack developer&#x1f4bb; specializing in scalable web applications and
+                            artificial intelligence.&#x1f916;</p>
                     </div>
         </section>
         <section id="section2">
@@ -116,10 +130,16 @@
         </section>
         <section id="section3">
             <h2>Contact</h2>
+            <div id="custom-alert" class="custom-alert">
+                <div class="alert-content">
+                    <p id="alert-message"></p>
+                    <button onclick="closeAlert()">OK</button>
+                </div>
+            </div>
             <form id="contact-form" class="contact">
                 <input type="hidden" name="contact_number" value="697483">
                 <input type="text" name="user_name" placeholder="Name" required />
-                <input type="email" name="user_email" placeholder="Email"  required/>
+                <input type="email" name="user_email" placeholder="Email" required />
                 <textarea name="message" rows="20" placeholder="Message" required></textarea>
                 <div class="form-footer">
                     <div class="icons">

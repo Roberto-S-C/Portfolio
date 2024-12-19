@@ -54,6 +54,10 @@
                     <p>React</p>
                 </div>
                 <div class="skill">
+                    <img src="/skills/tailwind.png" />
+                    <p>Tailwind</p>
+                </div>
+                <div class="skill">
                     <img src="/skills/three.png" />
                     <p>Three.js</p>
                 </div>
@@ -77,10 +81,12 @@
 
             <div class="projects">
                 <div class="project">
-                    <img role="button" id="left-arrow" class="arrows" src="/left-arrow.png" />
-                    <img role="button" id="right-arrow" class="arrows" src="/right-arrow.png" />
+                    <img role="button" class="arrows left-arrow" src="/left-arrow.png"
+                        onclick="carouselAiClothesLeft()" />
+                    <img role="button" class="arrows right-arrow" src="/right-arrow.png"
+                        onclick="carouselAiClothesRight()" />
                     <a target="_blank" href="https://www.aiclothes.shop">
-                        <img src="/projects/AiClothes.png" />
+                        <img id="aiclothes" src="/projects/AiClothes/Logo.png" />
                     </a>
                     <a target="_blank" href="https://www.aiclothes.shop">AiClothes</a>
                 </div>
@@ -88,11 +94,31 @@
         </section>
         <section id="section3">
             <h2>Contact</h2>
-            <p>Content for section 3...</p>
+            <form class="contact">
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <textarea rows="20" placeholder="Message"></textarea>
+                <div class="form-footer">
+                    <div class="icons">
+                        <a target="_blank" href="https://github.com/Roberto-S-C"><img src="/icons/githubForm.png" /></a>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/roberto-s%C3%A1nchez-c%C3%A1zares-687b54228/"><img
+                                src="/icons/linkedinForm.png" /></a>
+                        <a href="mailto:robertosanchezcazares@gmail.com">
+                            <img src="/icons/emailForm.png" />
+                        </a>
+
+                    </div>
+                    <div class="button-container">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </form>
         </section>
     </div>
 
     <script type="module" src="scripts/about.js"></script>
+    <script type="module" src="scripts/projects.js"></script>
 </body>
 
 </html>

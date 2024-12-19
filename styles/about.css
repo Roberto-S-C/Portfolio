@@ -18,11 +18,12 @@ h3 {
 
 .info img {
     width: 50px;
-    margin-left: 5px;
+    margin-left: 10px;
+    margin-top: 12px;
 }
 
 .description {
-    width: 40%;
+    width: 33%;
     font-size: 25px;
 }
 
@@ -77,9 +78,10 @@ h3 {
     background-color: white;
 }
 
-.project img {
+.project a img {
     width: 300px;
     height: 300px;
+    margin-top: 5px;
 }
 
 .project a {
@@ -98,16 +100,88 @@ h3 {
     cursor: pointer;
 }
 
-#left-arrow {
+.left-arrow {
     left: 0;
     width: 40px;
     height: 40px;
 }
 
-#right-arrow {
+.right-arrow {
     right: 0;
     width: 40px;
     height: 40px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    width: 40%;
+    padding: 15px 0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.contact input {
+    width: 80%;
+    margin: 5px 0;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid black;
+    color: black;
+}
+
+.contact textarea{
+    width: 80%;
+    margin-top: 20px;
+    padding: 5px;
+    border: 2px solid black;
+    color: black;
+    border-radius: 5px;
+    resize: none;
+}
+
+.contact button {
+    width: 60%;
+    height: 50px;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    background-color: black;
+    color: greenyellow;
+    font-size: 25px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.button-container  button:hover{
+   background-color: greenyellow; 
+   color: black;
+   cursor: pointer;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.icons img {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+.form-footer {
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
 }
 
 .canvas-container {

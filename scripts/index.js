@@ -22,7 +22,7 @@ if (WebGL.isWebGL2Available()) {
 
     const loader = new GLTFLoader();
     let earth;
-    loader.load('/earth/scene.gltf', gltf => {
+    loader.load('/Models/earth/scene.gltf', gltf => {
         earth = gltf.scene;
         earth.scale.set(30, 30, 30);
         earth.position.set(0, 0, 0);

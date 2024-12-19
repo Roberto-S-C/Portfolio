@@ -1,8 +1,9 @@
 import * as THREE from 'three';
-import { GLTFLoader, OrbitControls } from 'three/examples/jsm/Addons.js';
+import { GLTFLoader } from 'three/examples/jsm/Addons.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 class CanvasScene {
-    constructor(canvasId) {
+    constructor(canvasId, sceneIndex) {
         this.canvas = document.getElementById(canvasId);
         this.scene = new THREE.Scene();
         this.scene.background = new THREE.Color(0x000000);
@@ -16,15 +17,49 @@ class CanvasScene {
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.setSize(window.innerWidth, window.innerHeight);
 
-        this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-        this.controls.enableZoom = false;
+        this.sceneIndex = sceneIndex;
+        this.raspberry = null;
 
-        this.skills = [];
+        // Initialize appropriate models based on scene index
+        if (this.sceneIndex === 0) {
+            this.addDesk();
+        } else if (this.sceneIndex === 2) {
+            this.addRaspberry();
+        }
     }
 
-    setSkills(skills) {
-        this.skills = skills;
+    addRaspberry() {
+        const loader = new GLTFLoader();
+        loader.load('/Models/raspberry/scene.gltf', (gltf) => {
+            this.raspberry = gltf.scene;
+            this.raspberry.position.x = 150;
+            this.scene.add(this.raspberry);
+        });
     }
+
+    animate() {
+        if (this.mixer) {
+            const delta = this.clock.getDelta();
+            this.mixer.update(delta);
+        }
+
+        // Add rotation only if raspberry exists (scene 3)
+        if (this.sceneIndex === 2 && this.raspberry) {
+            this.raspberry.rotation.y += 0.01;
+
+            // Floating motion using sine wave
+            const time = Date.now() * 0.001; // Convert to seconds
+            this.raspberry.position.y = 30 + Math.sin(time * 2) * 10;
+
+            // Subtle scale pulsing
+            const scale = 2.2 + Math.sin(time * 3) * 0.05;
+            this.raspberry.scale.set(scale, scale, scale);
+        }
+
+        this.renderer.render(this.scene, this.camera);
+        requestAnimationFrame(() => this.animate());
+    }
+
 
     addLight() {
         const hemiLight = new THREE.HemisphereLight(0xffffbb, 0x080820, 1);
@@ -33,7 +68,7 @@ class CanvasScene {
 
     addDesk() {
         const loader = new GLTFLoader();
-        loader.load('/desk/scene.gltf', (gltf) => {
+        loader.load('/Models/desk/scene.gltf', (gltf) => {
             const desk = gltf.scene;
             desk.scale.set(1.3, 1.3, 1.3);
             desk.position.x = 120;
@@ -41,27 +76,21 @@ class CanvasScene {
             this.scene.add(desk);
         });
     }
-    
-
-    animate() {
-        this.renderer.render(this.scene, this.camera);
-        requestAnimationFrame(() => this.animate());
-    }
 }
 
 // Create scenes for each canvas
 const scenes = [
-    new CanvasScene('canvas1'),
-    new CanvasScene('canvas2'),
-    new CanvasScene('canvas3')
+    new CanvasScene('canvas1', 0),
+    new CanvasScene('canvas2', 1),
+    new CanvasScene('canvas3', 2),
 ];
 
 // Add elements to scenes
 scenes[0].addLight();
 scenes[0].addDesk();
+scenes[2].addLight();
 
-
-// Start animations
+// Animate each scene
 scenes.forEach(scene => scene.animate());
 
 // Modify the scroll event listener

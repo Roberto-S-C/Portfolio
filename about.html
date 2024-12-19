@@ -9,6 +9,27 @@
     <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/about.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "Da2dLVAv39QUas5MG",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <title>Roberto Sánchez</title>
 </head>
 
@@ -94,10 +115,11 @@
         </section>
         <section id="section3">
             <h2>Contact</h2>
-            <form class="contact">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <textarea rows="20" placeholder="Message"></textarea>
+            <form id="contact-form" class="contact">
+                <input type="hidden" name="contact_number" value="697483">
+                <input type="text" name="user_name" placeholder="Name" required />
+                <input type="email" name="user_email" placeholder="Email"  required/>
+                <textarea name="message" rows="20" placeholder="Message" required></textarea>
                 <div class="form-footer">
                     <div class="icons">
                         <a target="_blank" href="https://github.com/Roberto-S-C"><img src="/icons/githubForm.png" /></a>
@@ -110,7 +132,7 @@
 
                     </div>
                     <div class="button-container">
-                        <button>Send</button>
+                        <input id="submit" type="submit" value="Send" />
                     </div>
                 </div>
             </form>

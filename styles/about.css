@@ -142,7 +142,7 @@ h3 {
     resize: none;
 }
 
-.contact button {
+#submit {
     width: 60%;
     height: 50px;
     padding: 5px;
@@ -160,7 +160,7 @@ h3 {
     width: 80%;
 }
 
-.button-container  button:hover{
+#submit:hover{
    background-color: greenyellow; 
    color: black;
    cursor: pointer;

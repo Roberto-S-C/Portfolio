@@ -27,7 +27,7 @@ if (WebGL.isWebGL2Available()) {
         earth.scale.set(30, 30, 30);
         earth.position.set(0, 0, 0);
         earth.rotation.x = 0.4;
-        earth.rotation.y = 1.7;
+        earth.rotation.y = 1.75;
         scene.add(earth)
     }, undefined, function (error) {
 

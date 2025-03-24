@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: inherit; /* Ensure no global font overrides */
+}
+
+/* Ensure the Newsreader font is applied correctly */
+.font-newsreader {
+  font-family: 'Newsreader', serif;
+}

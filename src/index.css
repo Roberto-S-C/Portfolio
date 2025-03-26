@@ -1,16 +1,111 @@
 @import "tailwindcss";
 
-*{
-  margin: 0;
+* {
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: inherit; /* Ensure no global font overrides */
+#root {
+  font-family: inherit;
+  width: 100%;
+  cursor: url('./assets/cursor.png'), auto;
 }
 
 /* Ensure the Newsreader font is applied correctly */
 .font-newsreader {
   font-family: 'Newsreader', serif;
+}
+
+a {
+  cursor: url('./assets/pointer.png'), pointer;
+}
+
+#title {
+  animation-name: slideDown;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#career {
+  animation-name: slideUp;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#socials {
+  animation-name: slideFromRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#navbar {
+  animation-name: slideFromLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#pfp {
+  animation-name: growIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#name {
+  animation-name: slideUp;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#about {
+  animation-name: slideDown;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#video {
+  animation-name: growIn;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#ActiveX {
+  animation-name: slideDown;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-500%);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(1000%);
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes growIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

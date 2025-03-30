@@ -1,23 +1,63 @@
 @import "tailwindcss";
 
 * {
-  padding: 0;
   box-sizing: border-box;
+  background-color: #F6FFF8;
+  color: #6B9080;
 }
 
 #root {
   font-family: inherit;
   width: 100%;
-  cursor: url('./assets/cursor.png'), auto;
-}
-
-/* Ensure the Newsreader font is applied correctly */
-.font-newsreader {
-  font-family: 'Newsreader', serif;
 }
 
 a {
-  cursor: url('./assets/pointer.png'), pointer;
+  color: #A4C3B2;
+  font-weight: bold;
+}
+
+a:hover,
+input:hover {
+  color: #6B9080;
+}
+
+input {
+  color: #A4C3B2;
+}
+
+form,
+label,
+form div,
+form h2 {
+  background-color: #EAF4F4;
+}
+
+button {
+  background-color: #CCE3DE;
+}
+
+button:hover {
+  background-color: #6B9080;
+  color: #EAF4F4;
+}
+
+form p {
+  color: red;
+  background-color: #EAF4F4;
+}
+
+#alert-success {
+  background-color: rgba(40, 177, 40, 0.444);
+  color: white;
+}
+
+#alert-failure {
+  background-color: rgba(234, 25, 25, 0.475);
+  color: white;
+}
+
+.font-newsreader {
+  font-family: 'Newsreader', serif;
 }
 
 #title {
@@ -51,12 +91,18 @@ a {
 }
 
 #name {
-  animation-name: slideUp;
+  animation-name: growIn;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
 }
 
 #about {
+  animation-name: slideFromRight;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+#contact-form {
   animation-name: slideDown;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
@@ -69,7 +115,7 @@ a {
 }
 
 #ActiveX {
-  animation-name: slideDown;
+  animation-name: slideFromRight;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
 }

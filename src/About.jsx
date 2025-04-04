@@ -15,8 +15,8 @@ function About() {
       <h3 id='name' className='hidden lg:inline-block text-6xl font-bold italic font-newsreader'>ROBERTO SANCHEZ</h3>
 
       <div className='flex flex-col lg:flex-row justify-center h-4/5 lg:h-auto'>
-        <section className="flex flex-col justify-between items-center w-full lg:w-2/5">
-          <img id='pfp' className='w-4/5' src='/person.jpg' />
+        <section className="flex flex-col justify-between items-center w-full lg:w-1/3">
+          <img id='pfp' className='w-4/5 md:w-2/3 lg:w-4/5' src='/person.JPG' />
           <h3 id='name' className='mt-3 text-4xl md:text-6xl lg:hidden font-bold italic font-newsreader'>ROBERTO SANCHEZ</h3>
         </section>
 

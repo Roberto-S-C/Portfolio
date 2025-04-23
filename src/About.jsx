@@ -12,7 +12,7 @@ function About() {
         </div>
       </section>
 
-      <h3 id='name' className='hidden lg:inline-block text-6xl font-bold italic font-newsreader'>ROBERTO SANCHEZ</h3>
+      <h2 id='name' className='hidden lg:inline-block text-5xl font-bold italic font-newsreader'>ROBERTO SANCHEZ</h2>
 
       <div className='flex flex-col lg:flex-row justify-center h-4/5 lg:h-auto'>
         <section className="flex flex-col justify-between items-center w-full lg:w-1/3">

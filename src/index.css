@@ -2,8 +2,8 @@
 
 * {
   box-sizing: border-box;
-  background-color: #F6FFF8;
-  color: #6B9080;
+  background-color: #edf2f4;
+  color: #2b2d42;
 }
 
 #root {
@@ -11,39 +11,46 @@
   width: 100%;
 }
 
+h1 {
+  color: #d90429;
+}
+h2 {
+  color: #ef233c;
+}
+
 a {
-  color: #A4C3B2;
+  color: #8d99ae;
   font-weight: bold;
 }
 
 a:hover,
 input:hover {
-  color: #6B9080;
+  color: #2b2d42;
 }
 
 input {
-  color: #A4C3B2;
+  color: #8d99ae;
 }
 
 form,
 label,
 form div,
 form h2 {
-  background-color: #EAF4F4;
+  background-color: #edf2f4;
 }
 
 button {
-  background-color: #CCE3DE;
+  background-color: #8d99ae;
 }
 
 button:hover {
-  background-color: #6B9080;
-  color: #EAF4F4;
+  background-color: #2b2d42;
+  color: #edf2f4;
 }
 
 form p {
   color: red;
-  background-color: #EAF4F4;
+  background-color: #edf2f4;
 }
 
 #alert-success {

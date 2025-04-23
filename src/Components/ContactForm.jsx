@@ -34,7 +34,7 @@ function ContactForm({ setLoading, setShowAlert, setAlertStatus }) {
             id='contact-form'
             ref={form}
             onSubmit={handleSubmit(sendEmail)}
-            className="flex flex-col gap-y-5 p-5 w-11/12 md:w-2/3 lg:w-1/3 max-h-4/5 rounded-xl border border-[#A4C3B2]"
+            className="flex flex-col gap-y-5 p-5 w-11/12 md:w-2/3 lg:w-1/3 max-h-4/5 rounded-xl border border-[#8d99ae]"
         >
 
             <h2 className='text-5xl text-center font-newsreader'>Contact</h2>
@@ -45,7 +45,7 @@ function ContactForm({ setLoading, setShowAlert, setAlertStatus }) {
                     name="user_name"
                     placeholder='Name'
                     {...register('user_name', { required: 'Name is required' })}
-                    className="border border-[#CCE3DE] hover:border-[#6B9080] focus:border-[#6B9080] outline-none rounded-md p-1 w-full font-newsreader"
+                    className="border border-[#8d99ae] hover:border-[#2b2d42] focus:border-[#2b2d42] outline-none rounded-md p-1 w-full font-newsreader"
                 />
                 {errors.user_name && <p className="text-sm font-newsreader mt-1">{errors.user_name.message}</p>}
             </div>
@@ -62,7 +62,7 @@ function ContactForm({ setLoading, setShowAlert, setAlertStatus }) {
                             message: 'Invalid email address',
                         },
                     })}
-                    className="border border-[#CCE3DE] hover:border-[#6B9080] focus:border-[#6B9080] outline-none rounded-md p-1 w-full font-newsreader"
+                    className="border border-[#8d99ae] hover:border-[#2b2d42] focus:border-[#2b2d42] outline-none rounded-md p-1 w-full font-newsreader"
                 />
                 {errors.user_email && <p className="text-sm font-newsreader mt-1">{errors.user_email.message}</p>}
             </div>
@@ -72,7 +72,7 @@ function ContactForm({ setLoading, setShowAlert, setAlertStatus }) {
                     name="message"
                     placeholder='Message'
                     {...register('message', { required: 'Message is required' })}
-                    className="border border-[#CCE3DE] hover:border-[#6B9080] focus:border-[#6B9080] outline-none rounded-md w-full p-1 resize-none font-newsreader"
+                    className="border border-[#8d99ae] hover:border-[#2b2d42] focus:border-[#2b2d42] outline-none rounded-md w-full p-1 resize-none font-newsreader"
                     rows="5"
                 />
                 {errors.message && <p className="text-sm font-newsreader">{errors.message.message}</p>}

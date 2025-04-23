@@ -12,7 +12,7 @@ function Projects() {
                 </div>
             </section>
 
-            <Link to={"https://www.activex.club"} id='title' className="text-center text-5xl font-bold font-newsreader">ActiveX</Link>
+            <Link to={"https://www.activex.club"} id='title' className="text-center underline text-5xl font-bold font-newsreader hover:text-[#d80529]">ActiveX</Link>
 
             <section className='flex flex-col lg:flex-row items-center w-11/12 h-3/4 lg:h-auto'>
                 <div id='video' className='flex justify-center w-full lg:w-1/2 mx-2'>

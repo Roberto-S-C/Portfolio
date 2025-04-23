@@ -71,6 +71,12 @@ form p {
   animation-name: slideDown;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
+  color: #ef233c;
+  text-decoration: underline;
+}
+
+#title:hover{
+  color: #d80529;
 }
 
 #career {
